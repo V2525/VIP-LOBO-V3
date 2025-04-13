@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP Lobo V3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1c1c1c;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    main {
+      padding: 2em;
+      max-width: 600px;
+      margin: auto;
+    }
+    label, select, input, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .section {
+      margin-bottom: 2em;
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <header>VIP Lobo V3 - Robô Avançado</header>
+  <main>
+    <div class="section">
+      <div class="title">1. Escolha sua Corretora</div>
+      <select id="corretora">
+        <option value="">-- Selecione a corretora --</option>
+        <option>Binance</option>
+        <option>IQ Option</option>
+        <option>Olymp Trade</option>
+        <option>Quotex</option>
+        <option>Binomo</option>
+        <option>Bullux</option>
+        <option>Pocket Option</option>
+        <option>Expert Option</option>
+        <option>Deriv</option>
+      </select>
+    </div><div class="section">
+  <div class="title">2. Login na Corretora</div>
+  <input type="email" placeholder="Digite seu e-mail" id="email">
+  <input type="password" placeholder="Digite sua senha" id="senha">
+</div>
+
+<div class="section">
+  <div class="title">3. Tipo de Conta</div>
+  <select id="tipoConta">
+    <option>Conta Demo</option>
+    <option>Conta Real</option>
+  </select>
+</div>
+
+<div class="section">
+  <button onclick="conectar()">Conectar</button>
+</div>
+
+<div class="section">
+  <div class="title">Modo de Operação</div>
+  <select id="modo">
+    <option>Robô de Sinal</option>
+    <option>Robô Automático</option>
+  </select>
+</div>
+
+<div class="section">
+  <div class="title">Gráfico ao Vivo</div>
+  <iframe src="https://www.tradingview.com/chart/" width="100%" height="300"></iframe>
+</div>
+
+<div class="section">
+  <div class="title">Painel de Controle</div>
+  <p>Saldo: R$ <span id="saldo">0,00</span></p>
+  <p>Meta Diária: R$200,00</p>
+  <p>Limite de Perda: R$10,00</p>
+  <p>Histórico: <span id="historico">0 vitórias / 0 derrotas</span></p>
+</div>
+
+  </main>  <script>
+    function conectar() {
+      const corretora = document.getElementById('corretora').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      if (!corretora || !email || !senha) {
+        alert("Preencha todos os campos para continuar!");
+        return;
+      }
+
+      alert("Conectado com sucesso na corretora " + corretora + " como " + email);
+      // Aqui entraria a lógica para autenticar e operar com estratégias avançadas
+    }
+  </script></body>
+</html>
